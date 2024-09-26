@@ -854,7 +854,7 @@ namespace Yarn.Unity
                     Debug.LogError($"Can't call command {commandName}: failed to find a game object named {parts.ElementAtOrDefault(1)}", this);
                     break;
                 case CommandDispatchResult.StatusType.TargetMissingComponent:
-                    Debug.LogError($"Can't call command {commandName}, because {parts.ElementAtOrDefault(1)} doesn't have the correct component");
+                    Debug.LogError($"Can't call command {commandName}, because {parts.ElementAtOrDefault(1)} doesn't have the correct component", dispatchResult.Target);
                     break;
                 case CommandDispatchResult.StatusType.InvalidParameterCount:
                     Debug.LogError($"Can't call command {commandName}: incorrect number of parameters");

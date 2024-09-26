@@ -3,6 +3,7 @@ Yarn Spinner is licensed to you under the terms found in the file LICENSE.md.
 */
 
 using System;
+using UnityEngine;
 
 namespace Yarn.Unity
 {
@@ -50,5 +51,7 @@ namespace Yarn.Unity
         internal string Message;
 
         internal bool IsSuccess => this.Status == StatusType.SucceededAsync || this.Status == StatusType.SucceededSync;
+
+        internal UnityEngine.Object Target;
     }
 }

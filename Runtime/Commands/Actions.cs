@@ -269,7 +269,8 @@ namespace Yarn.Unity
                         return new CommandDispatchResult
                         {
                             Message = $"{this.Name} can't be called on {gameObjectName}, because it doesn't have a {this.DeclaringType.Name}",
-                            Status = CommandDispatchResult.StatusType.TargetMissingComponent
+                            Status = CommandDispatchResult.StatusType.TargetMissingComponent,
+                            Target = gameObject
                         };
                     }
 
